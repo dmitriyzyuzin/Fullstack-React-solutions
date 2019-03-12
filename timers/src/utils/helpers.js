@@ -47,5 +47,6 @@ function pad(numberString, size) {
 }
 
 export {
-    renderElapsedString
+    renderElapsedString,
+    newTimer
 }
