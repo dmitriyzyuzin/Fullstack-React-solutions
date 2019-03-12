@@ -4,7 +4,7 @@ import Timer from "./Timer";
 
 class EditableTimer extends React.Component {
     state = {
-        openEditForm: true
+        openEditForm: false
     };
 
     closeForm = () => {
@@ -27,8 +27,9 @@ class EditableTimer extends React.Component {
         alert('delete!');
     };
 
-    handleFormSubmit = timer => {
-        console.log('timer: ', timer);
+    handleFormSubmit = timerAttrs => {
+        this.props.onFormSubmit(timerAttrs);
+        this.closeForm();
     };
 
     render() {
